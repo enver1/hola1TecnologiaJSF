@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+         <h:form>
+            <h:graphicImage url="#{resource['images:duke-waving.gif']}"
+                            alt="Duke agitando su mano (Duke waving his hand)"/>
+            <h2>Hola, mi nombre es Duke. Cual es tu nombre?</h2>            
+            <h:inputText id="username"
+                         title="My name is: "
+                         value="#{hello.name}"
+                         required="true"
+                         requiredMessage="Error: Un nombre es requerido."
+                         maxlength="25" />
+            <!-- El atributo maxlength especifica la longitud máxima del campo.-->
+            <!-- El atributo required especifica que el campo debe ser llenado-->
+            <!-- El atributo requiredMessage mensaje de error que se mostrará si el campo se deja vacío-->
+            <!-- El atributo title texto que utilizarán los lectores de pantalla para personas con discapacidades visuales-->
+            <!-- El atributo value contiene una expresión que será proporcionada por el Hello managed bean.-->
+            <p></p>
+            <h:commandButton id="submit" value="Submit" action="response">                
+            </h:commandButton>
+            <!-- El Submit del componente commandButton especifica el action como response, lo que significa que cuando se hace clic en el botón, se muestra la página response.xhtml.-->
+            <h:commandButton id="reset" value="Reset" type="reset">
+            </h:commandButton>
+        </h:form>
+    </h:body>
+</html>
+
